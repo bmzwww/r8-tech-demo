@@ -1,0 +1,12 @@
+{
+   "name":"Flask App",
+   "description":"A simple Flask app with API.",
+   "keywords":[
+      "Flask",
+      "API",
+      "Python3"
+   ],
+   "website":"https://github.com/bmzwww/",
+   "repository":"https://github.com/bmzwww/r8-tech-demo",
+   "logo":"https://telegra.ph/file/05e4a6d070a97dd853297.png"
+}
