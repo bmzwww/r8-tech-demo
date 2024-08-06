@@ -4,9 +4,9 @@
     <title>A simple HTML document</title>
 </head>
 <body>
-    <h1>List of top 10 articles.</h1>
+    <h1>List of top 10 articles.</h1>    
     {% for name in names %}
-    <p>{{name}}!</p>
-    {% endfor %}
+    <p>{{names.index(name) + 1}}. {{name}}!</p>
+    {% endfor %}    
 </body>
 </html>
