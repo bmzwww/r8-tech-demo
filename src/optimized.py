@@ -17,7 +17,8 @@ def index_page():
         top_ten_articles.append(get_article_title(article))
         if top_ten_articles.__len__() >= limit:
             break
-    
+
+    # Renders a HTML file.
     return render_template('simple.html', names=top_ten_articles)
 
 def get_article_title(article):
@@ -111,6 +112,5 @@ def load_page(page_number):
 
 import os
 
-# If file is called directly called, then run the app on the PORT provided defined in ENV or use '6969'.
 if __name__ == "__main__":
     app.run("0.0.0.0", port=os.getenv('PORT', 8800))

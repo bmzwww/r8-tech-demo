@@ -66,7 +66,7 @@ def index_page():
         if top_ten_articles.__len__() >= limit:
             break
     
-    # Renders a HTML file. (For web page streaming.)
+    # Renders a HTML file.
     return render_template('simple.html', names=top_ten_articles)
 
 def get_article_title(article: DataItem|DataItemWithComment):
@@ -162,6 +162,5 @@ def load_page(page_number):
 
 import os
 
-# If file is called directly called, then run the app on the PORT provided defined in ENV or use '6969'.
 if __name__ == "__main__":
     app.run("0.0.0.0", port=os.getenv('PORT', 9900))
