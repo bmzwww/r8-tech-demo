@@ -1,10 +1,32 @@
-## How to start this
-- Clone repository or download from that address https://github.com/bmzwww/r8-tech-demo/ 🔗
-- Download latest Python
-- Go to that downloaded folder and create .venv environment.
-- You can swtich to that Python environment by command like '.\.venv\Scripts\activate.bat' or  '.\.venv\Scripts\Activate.ps1'
-- You need to call command to update python packages 'pip install -r .\requirements.txt'
-- This project has two solutions of the same problem. First one (advanced.py) uses classes other (optimized.py) uses dynamically by hardcoded fieldnames.
-- Application using demo.env to read default environmental variables but you can rename file demo.env to .env and use override these values.
-- To start application you can use command likem 'python run.py' or 'python .\src\optimized.py' or 'python .\src\advanced.py'
-- You can find in project test cases for pytest in folder "tests". You can try to run them useing command 'pytest' and see results.
+## About
+This project provides two solutions to the same Python Developer Recruitment Exercise. The first solution (`advanced.py`) utilizes classes, while the second (`optimized.py`) employs dictionaries with field names.
+
+## How to Start
+
+1. **Clone or Download the Repository**
+   - Access the project at [this address](https://github.com/bmzwww/r8-tech-demo/).
+   - Clone the repository or download the files.
+
+2. **Install Python**
+   - Download and install the latest version of Python.
+   - Optionally, set up a separate Python environment to run this app by creating a `.venv` environment with the latest Python version.
+   - To activate the virtual environment on Windows, use the following commands:
+     - `.\.venv\Scripts\activate.bat`
+     - `.\.venv\Scripts\Activate.ps1` (for PowerShell)
+
+3. **Install Dependencies**
+   - After installing Python, update the Python packages by running:
+     - `pip install -r .\requirements.txt`
+
+4. **Configure Environment Variables**
+   - The application uses `demo.env` to read default environmental variables. You can rename `demo.env` to `.env` to override these values.
+
+5. **Run the Application**
+   - Use the following commands to start the application:
+     - `python run.py`
+     - `python .\src\optimized.py` (uses dictionaries with field names)
+     - `python .\src\advanced.py` (uses classes)
+
+6. **Run Tests**
+   - Project test cases for pytest are located in the `tests` folder. Run them using the command:
+     - `pytest`
