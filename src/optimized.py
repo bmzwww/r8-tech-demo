@@ -1,7 +1,17 @@
 import time
 import traceback
-from flask import Flask, json, render_template
 import requests
+import os
+from dotenv import load_dotenv
+from flask import Flask, json, render_template
+
+load_dotenv()
+api_uri = os.getenv("API_URI")
+
+if api_uri is None:
+    # loading variables from demo.env file
+    load_dotenv('demo.env')
+    api_uri = os.getenv("API_URI")
 
 app = Flask(__name__)  
 
@@ -92,7 +102,7 @@ def load_page(page_number):
     invalid_page = 'Invalid page number'
 
     try:
-        res = requests.get('https://jsonmock.hackerrank.com/api/articles?page=' + page_number.__str__())
+        res = requests.get(api_uri + page_number.__str__())
 
         if res.text.startswith('{"error":'):
             error = res.text.split(':"')[1].split('"')[0]

@@ -1,12 +1,23 @@
-from dataclasses import dataclass, field
 import time
 import traceback
-from typing import List, Optional
-from flask import Flask, json, render_template
 import requests
+import os
+from dotenv import load_dotenv 
+from typing import List, Optional
+from dataclasses import dataclass, field
+from flask import Flask, json, render_template
+
+# loading variables from .env file
+load_dotenv() 
+
+api_uri = os.getenv("API_URI")
+
+if api_uri is None:
+    # loading variables from demo.env file
+    load_dotenv('demo.env')
+    api_uri = os.getenv("API_URI")
 
 app = Flask(__name__)
-api_uri = 'https://jsonmock.hackerrank.com/api/articles?page='
 
 @dataclass
 class DataItem:
